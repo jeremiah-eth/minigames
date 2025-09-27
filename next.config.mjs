@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
+    // Temporarily ignore specific rules during builds
     ignoreDuringBuilds: true,
+  },
+  typescript: {
+    // Ignore TypeScript errors during builds (be careful with this)
+    ignoreBuildErrors: false, // Keep this false to catch real issues
   },
   // Silence warnings
   // https://github.com/WalletConnect/walletconnect-monorepo/issues/1908
